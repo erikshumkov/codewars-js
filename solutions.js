@@ -1,12 +1,12 @@
 // Name of the codewars challenge then the solution.
 
 
-// Simple validation of a username with regex
+//1 Simple validation of a username with regex
 const validateUsr = username => /^[a-z\d_]{4,16}$/.test(username);
 
 
 
-// Find The Parity Outlier
+//2 Find The Parity Outlier
 function findOutlier(integers) {
   const oddArr = integers.filter(int => int % 2 === 0);
   const evenArr = integers.filter(int => int % 2 !== 0);
@@ -16,7 +16,7 @@ function findOutlier(integers) {
 
 
 
-// Isograms
+//3 Isograms
 function isIsogram(str) {
   var word = str.toLowerCase();
   var obj = {};
@@ -41,3 +41,13 @@ function isIsogram(str) {
   // return true || false
   return flag;
 }
+
+// 4 Regex count lowercase letters
+function lowercaseCount(str) {
+  const re = /[a-z]+/g;
+  const found = str.match(re);
+  return found !== null ? found.reduce((acc, curr) => acc += curr).length : 0;
+}
+
+// 5 Disemvowel Trolls
+const disemvowel = (str) => str.replace(/[aeiou]/gi, "");
