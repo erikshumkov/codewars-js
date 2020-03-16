@@ -51,3 +51,8 @@ function lowercaseCount(str) {
 
 // 5 Disemvowel Trolls
 const disemvowel = (str) => str.replace(/[aeiou]/gi, "");
+
+// 6 Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+function countDevelopers(list) {
+  return list.filter(p => p.continent === "Europe" && p.language === "JavaScript").length;
+}
