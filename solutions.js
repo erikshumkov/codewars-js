@@ -77,3 +77,35 @@ function likes(names) {
     return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
   }
 }
+
+// 9 Credit Card Mask
+function maskify(cc) {
+  if (cc.length !== 4) {
+    var re = /[a-z\d]/gi;
+    var lastFour = cc.slice(-4);
+    var allCharsButLastFour = cc.substring(0, cc.length - 4);
+    var mask = allCharsButLastFour.replace(re, "#");
+    return mask + lastFour;
+  } else {
+    return cc;
+  }
+}
+
+// 10 Nickname Generator
+function nicknameGenerator(name) {
+  const re = /[aeiou]/;
+  if (re.test(name.charAt(2))) {
+    return name.substring(0, 4);
+  } else if (name.length < 4) {
+    return "Error: Name too short";
+  } else {
+    return name.substring(0, 3);
+  }
+}
+
+// 11 Create Phone Number
+function createPhoneNumber(numbers) {
+  const str = numbers.join("");
+  const string = "(" + str.substring(0, 3) + ")" + " " + str.substring(3, 6) + "-" + str.slice(-4);
+  return string;
+}
