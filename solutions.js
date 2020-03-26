@@ -109,3 +109,35 @@ function createPhoneNumber(numbers) {
   const string = "(" + str.substring(0, 3) + ")" + " " + str.substring(3, 6) + "-" + str.slice(-4);
   return string;
 }
+
+// 12 Don't give me five!
+const dontGiveMeFive = (start, end) => {
+  const arr = [];
+  const re = /5/;
+
+  for (let i = start; i <= end; i++) {
+    if (!re.test(i)) {
+      arr.push(i);
+    }
+  }
+  return arr.length;
+}
+
+// 13 Find the odd int
+function findOdd(A) {
+  const obj = {};
+  var arr = [];
+  A.forEach(n => arr.push(n.toString()));
+
+  for (let i = 0; i < arr.length; i++) {
+
+    if (obj[`${arr[i]}`] === undefined) obj[`${arr[i]}`] = 1;
+    else obj[`${arr[i]}`]++;
+  }
+
+  for (const prop in obj) {
+    if (obj[prop] % 2 !== 0) {
+      return +prop;
+    }
+  }
+}
