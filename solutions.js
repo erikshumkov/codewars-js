@@ -141,3 +141,18 @@ function findOdd(A) {
     }
   }
 }
+
+// 14 Remove String Spaces
+noSpace = (x) => x.replace(/ /g, "");
+
+// 15 Square Every Digit
+function squareDigits(num) {
+  var str = `${num}`;
+  var numberStr = "";
+
+  for (let i = 0; i < str.length; i++) {
+    numberStr += Math.pow(+str[i], 2);
+  }
+
+  return +numberStr;
+}
