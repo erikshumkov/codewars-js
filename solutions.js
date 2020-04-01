@@ -166,4 +166,13 @@ function divisors(integer) {
     }
   }
   return arr.length === 0 ? `${integer} is prime` : arr;
-}; 
+};
+
+// 17 Odd or Even?
+oddOrEven = array => {
+  const num = array.reduce((t, c) => t += c, 0);
+  return num % 2 === 0 ? "even" : "odd";
+}
+
+// 18 Printer Errors
+printerError = (s) => `${s.match(/[n-z]/g) ? s.match(/[n-z]/g).length : 0}/${s.length}`
