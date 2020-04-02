@@ -176,3 +176,6 @@ oddOrEven = array => {
 
 // 18 Printer Errors
 printerError = (s) => `${s.match(/[n-z]/g) ? s.match(/[n-z]/g).length : 0}/${s.length}`
+
+// 19 Summing a number's digits
+sumDigits = (number) => [...("" + Math.abs(number))].reduce((t, c) => t += +c, 0);
