@@ -179,3 +179,11 @@ printerError = (s) => `${s.match(/[n-z]/g) ? s.match(/[n-z]/g).length : 0}/${s.l
 
 // 19 Summing a number's digits
 sumDigits = (number) => [...("" + Math.abs(number))].reduce((t, c) => t += +c, 0);
+
+// 20 Most digits
+findLongest = (array) => {
+  const arr = [];
+  array.forEach(item => arr.push(item.toString().length));
+  const index = arr.indexOf(Math.max(...arr));
+  return array[index];
+};
