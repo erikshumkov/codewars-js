@@ -187,3 +187,12 @@ findLongest = (array) => {
   const index = arr.indexOf(Math.max(...arr));
   return array[index];
 };
+
+// 21 Sort array by string length
+sortByLength = (array) => {
+  const obj = {};
+  array.map(item => {
+    obj[item.length] = item
+  });
+  return Object.values(obj);
+};
