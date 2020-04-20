@@ -196,3 +196,10 @@ sortByLength = (array) => {
   });
   return Object.values(obj);
 };
+
+// 22 Reverse words
+const reverseWords = (s) => {
+  const a = s.split(" ");
+  const mapped = a.map(w => [...w].reverse().join(""));
+  return mapped.join(" ");
+}
