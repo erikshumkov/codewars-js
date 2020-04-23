@@ -203,3 +203,6 @@ const reverseWords = (s) => {
   const mapped = a.map(w => [...w].reverse().join(""));
   return mapped.join(" ");
 }
+
+// 23 Reversed Strings
+const solution = (str) => str.split("").reverse().join("");
