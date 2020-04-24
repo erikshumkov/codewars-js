@@ -206,3 +206,15 @@ const reverseWords = (s) => {
 
 // 23 Reversed Strings
 const solution = (str) => str.split("").reverse().join("");
+
+// 24 Sum of a sequence
+const sequenceSum = (begin, end, step) => {
+
+  let sum = 0;
+
+  for (let i = begin; i <= end; i += step) {
+    sum += i;
+  }
+
+  return sum;
+};
