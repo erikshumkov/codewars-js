@@ -218,3 +218,30 @@ const sequenceSum = (begin, end, step) => {
 
   return sum;
 };
+
+// 25 Are the numbers in order?
+const inAscOrder = (arr) => {
+
+  let i = 0;
+  let lastIndex;
+
+  for (i; i < arr.length; i++) {
+
+    const lastItem = arr[arr.length - 1];
+
+    if (i > 0) {
+      lastIndex = i - 1;
+
+      if (arr[i] < arr[lastIndex]) {
+        return false;
+      }
+    }
+
+    if (arr[i] === lastItem) {
+      if (lastItem > lastIndex) {
+        return true;
+      }
+    }
+
+  }
+}
