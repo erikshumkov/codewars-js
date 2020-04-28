@@ -245,3 +245,22 @@ const inAscOrder = (arr) => {
 
   }
 }
+
+// 26 Split Strings 6kyu
+function solution(str) {
+  const arr = str.split("");
+  const pairs = [];
+  for (let i = 0; i < str.length; i++) {
+    if (arr.length === 1) {
+      pairs.push(`${arr.shift()}_`);
+      break;
+    }
+    if (arr.length === 2) {
+      pairs.push(arr.splice(0, 2).join(""));
+      break;
+    }
+    pairs.push(arr.splice(0, 2).join(""));
+  }
+
+  return pairs;
+} 
