@@ -263,4 +263,7 @@ function solution(str) {
   }
 
   return pairs;
-} 
+}
+
+// 27 Counting Sheep...
+const countSheeps = (a) => a.filter(v => v === true).length
