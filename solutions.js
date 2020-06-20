@@ -267,3 +267,22 @@ function solution(str) {
 
 // 27 Counting Sheep...
 const countSheeps = (a) => a.filter(v => v === true).length
+
+// 28 FizzBuzz
+function fizzBuzz() {
+  for (let i = 1; i <= 100; i++) {
+
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz")
+    }
+    else if (i % 3 === 0) {
+      console.log("Fizz");
+    }
+    else if (i % 5 === 0) {
+      console.log("Buzz");
+    }
+    else {
+      console.log(i);
+    }
+  }
+}
