@@ -286,3 +286,18 @@ function fizzBuzz() {
     }
   }
 }
+
+// 29 
+function alphabeticShift(inputString) {
+  let letterPlusOne = "";
+
+  inputString.toLowerCase().split("").forEach((letter, index) => {
+    if (letter === "z") {
+      letterPlusOne += "a";
+    } else {
+      letterPlusOne += String.fromCharCode(inputString.charCodeAt(index) + 1)
+    }
+  });
+
+  return letterPlusOne;
+}
