@@ -301,3 +301,22 @@ function alphabeticShift(inputString) {
 
   return letterPlusOne;
 }
+
+// 30 Check if string is in alphabetic order. Example s = "abc" === true, "zab" === false
+function alphabetSubsequence(s) {
+  const lettersToValue = s.split("").map((char, index) => s.charCodeAt(index));
+
+  const checkArr = [];
+
+  for (let i = 0; i < lettersToValue.length - 1; i++) {
+
+    if (lettersToValue[i] < lettersToValue[i + 1]) {
+      checkArr.push(true);
+    } else {
+      checkArr.push(false);
+    }
+
+  }
+
+  return checkArr.includes(false) ? false : true;
+}
