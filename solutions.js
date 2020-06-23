@@ -320,3 +320,29 @@ function alphabetSubsequence(s) {
 
   return checkArr.includes(false) ? false : true;
 }
+
+// 31 arrayMaxConsecutiveSum
+// For inputArray = [2, 3, 5, 1, 6] and k = 2, the output should be 
+// arrayMaxConsecutiveSum(inputArray, k) = 8. All possible sums of 2 consecutive elements are:
+
+// 2 + 3 = 5;
+// 3 + 5 = 8;
+// 5 + 1 = 6;
+// 1 + 6 = 7.
+// Thus, the answer is 8
+
+function arrayMaxConsecutiveSum(inputArray, k) {
+
+  let highestSum = 0;
+
+  inputArray.forEach((val, i) => {
+    if (inputArray.slice(i, i + k).length === k) {
+      let sumOfSlice = inputArray.slice(i, i + k).reduce((a, b) => a += b)
+      sumOfSlice > highestSum ? highestSum = sumOfSlice : highestSum;
+    }
+  })
+
+  return highestSum;
+}
+
+console.log(arrayMaxConsecutiveSum([2, 3, 5, 1, 6], 2));
