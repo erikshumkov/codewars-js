@@ -345,4 +345,27 @@ function arrayMaxConsecutiveSum(inputArray, k) {
   return highestSum;
 }
 
-console.log(arrayMaxConsecutiveSum([2, 3, 5, 1, 6], 2));
+// 32 arrayMaximalAdjacentDifference
+// Given an array of integers, find the maximal absolute difference between any two of its adjacent elements.
+
+// Example
+
+// For inputArray = [2, 4, 1, 0], the output should be arrayMaximalAdjacentDifference(inputArray) = 3.
+
+function arrayMaximalAdjacentDifference(inputArray) {
+
+  let biggestDiff = 0;
+
+  for (let i = 0; i < inputArray.length; i += 1) {
+
+    let slice2 = inputArray.slice(i, i + 2);
+
+    let diff = slice2.sort((a, b) => b - a).reduce((a, b) => a -= b);
+
+    if (diff > biggestDiff) biggestDiff = diff;
+
+  }
+
+  return biggestDiff;
+
+}
