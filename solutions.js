@@ -383,3 +383,12 @@ function characterParity(symbol) {
     return +symbol % 2 === 0 ? "even" : "odd";
   }
 }
+
+// 34 Check if a string (first argument, str) ends with the given target string (second argument, target).
+// Example
+// confirmEnding("Abstraction", "action") returns true;
+// confirmEnding("Open sesame", "pen") returns false;
+
+function confirmEnding(str, target) {
+  return str.substr(-target.length) === target ? true : false;
+}
