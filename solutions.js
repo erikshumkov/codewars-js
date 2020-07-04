@@ -392,3 +392,15 @@ function characterParity(symbol) {
 function confirmEnding(str, target) {
   return str.substr(-target.length) === target ? true : false;
 }
+
+// 35 contains duplicates. Example [1,2,3,1] = true, [3,2,6] = false. 
+function containsDuplicates(a) {
+  a = a.sort((a, b) => a - b);
+
+  for (let i = 0; i < a.length; i++) {
+    console.log(a[i], a[i + 1]);
+    if (a[i] === a[i + 1]) return true;
+  }
+
+  return false;
+}
