@@ -404,3 +404,10 @@ function containsDuplicates(a) {
 
   return false;
 }
+
+// 36 even digits only. Example n = 2486268 returns true. n = 2463862 returns false.
+function evenDigitsOnly(n) {
+  const check = n.toString().split("").filter(int => parseInt(int) % 2 !== 0);
+
+  return check.length > 0 ? false : true;
+}
