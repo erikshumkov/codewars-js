@@ -433,5 +433,16 @@ function factorializeANumber(num) {
   }
 
   return arr.reduce((a, b) => a * b);
-
 }
+
+// 38
+/*
+For address = "prettyandsimple@example.com", the output should be findEmailDomain(address) = "example.com";
+
+For address = "<>[]:,;@"!#$%&*+-/=?^_{}| ~.a"@example.org", the output should be findEmailDomain(address) = "example.org".
+*/
+function findEmailDomain(address) {
+  return address.substring(address.lastIndexOf('@') + 1);
+}
+// console.log(findEmailDomain('prettyandsimple@example.com'));
+// console.log(findEmailDomain('<>[]:,;@"!#$%&*+-/=?^_{}| ~.a"@example.org'));
