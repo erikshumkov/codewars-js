@@ -446,3 +446,22 @@ function findEmailDomain(address) {
 }
 // console.log(findEmailDomain('prettyandsimple@example.com'));
 // console.log(findEmailDomain('<>[]:,;@"!#$%&*+-/=?^_{}| ~.a"@example.org'));
+
+// 39
+/*
+Find the leftmost digit that occurs in a given string.
+
+For inputString = "var_1__Int", the output should be firstDigit(inputString) = '1';
+
+For inputString = "q2q-q", the output should be firstDigit(inputString) = '2';
+
+For inputString = "0ss", the output should be firstDigit(inputString) = '0'.
+
+*/
+function firstDigit(inputString) {
+  return inputString.match(/[0-9]/)[0];
+}
+
+// console.log(firstDigit('var_1__Int'));
+// console.log(firstDigit('q2q-q'));
+// console.log(firstDigit('0ss'));
