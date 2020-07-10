@@ -465,3 +465,12 @@ function firstDigit(inputString) {
 // console.log(firstDigit('var_1__Int'));
 // console.log(firstDigit('q2q-q'));
 // console.log(firstDigit('0ss'));
+
+// 40 Reverse A String
+// String "hello" will return "olleh"
+function reverseAString(str) {
+  return str.split("").reverse().join("");
+}
+
+// console.log(reverseAString('hello'));
+// console.log(reverseAString('Howdy'));
